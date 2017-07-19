@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <base href="/">
+    <link rel="stylesheet" href="css/angular_material.css">
+    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="css/slickSlider.css">
+    <link rel="stylesheet" href="css/main_style.css">
+
+    <script src="app/lib/angular.min.js" defer></script>
+    <script src="app/lib/angular_animate.js" defer></script>
+    <script src="app/lib/angular_aria.js" defer></script>
+    <script src="app/lib/angular_message.js" defer></script>
+    <script src="app/lib/angular_material.js" defer></script>
+    <script src="app/app.js" defer></script>
+    <script src="app/components/topNavBar.js" defer></script>
+    <script src="app/components/headerSlider.js" defer></script>
+    <script src="app/components/clothInfo.js" defer></script>
+    <script src="app/components/horizontalSliders.js" defer></script>
+    <script src="app/components/footerComponent.js" defer></script>
+
+    <script src="app/directives/changeNavOnScroll.js" defer></script>
+    <script src="app/directives/selectStyling.js" defer></script>
+    <script src="app/directives/runHorizontalSliders.js" defer></script>
+    <script src="app/directives/slick.js" defer></script>
+    <script src="app/directives/addScopeToClonedItems.js" defer></script>
+    <script src="app/directives/imgLoadEnd.js" defer></script>
+
+    <script src="app/modals/collectionDetailsCtrl.js" defer></script>
+    <script src="app/modals/socialsBlockCtrl.js" defer></script>
+    <script src="app/modals/userDetailsCtrl.js" defer></script>
+    <script src="app/modals/helpAndAboutCtrl.js" defer></script>
+    <script src="app/modals/showCartCtrl.js" defer></script>
+    <script src="app/modals/firstTimeLogInWindowCtrl.js" defer></script>
+
+    <script src="app/services/showModals.js" defer></script>
+    <script src="app/services/modalEventsHandle.js" defer></script>
+    <script src="app/services/storeServise.js" defer></script>
+    <script src="app/services/requestService.js" defer></script>
+    <script src="app/services/findCurrentItems.js" defer></script>
+    <script src="app/services/clothesPreload.js" defer></script>
+    <script src="app/services/addLoadFalsePropertyForImg.js" defer></script>
+    <script src="app/services/addImageIndexesToVisibles.js" defer></script>
+
+    <script src="js/jQuery3_2.js" defer></script>
+    <script src="js/jquery-ui.min.js" defer></script>
+    <script src="js/sly/dev_sly.js" defer></script>
+    <script src="js/slickSlider.js" defer></script>
+    <script src="js/select2/select2.js" defer></script>
+    <title>Shake a look</title>
+</head>
+<body ng-app="app" ng-if="runWhenDataLoad">
+    <top-nav-bar class="nav_bar"  change-nav-on-scroll></top-nav-bar>
+    <header-slider class="slider"></header-slider>
+    <cloth-info class="clothes_choose"></cloth-info>
+    <horizontal-sliders class="horizontal_sliders"></horizontal-sliders>
+    <footer-component class="site_footer"></footer-component>
+</body>
+</html>

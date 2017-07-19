@@ -1,0 +1,6 @@
+<div class="modal_about">
+    <h4 class="modal-title" >{{content.title}}<span class="close" ng-click="closeModal()">&times;</span></h4>
+    <div class="modal-body">
+        <p class="text" ng-repeat="paragraph in content.text track by $index" ng-bind="paragraph"></p>
+    </div>
+</div>

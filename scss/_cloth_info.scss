@@ -1,0 +1,230 @@
+.clothes_choose{
+  width: 100%;
+  min-height: 570px;
+  display: block;
+  .main_container{
+    background: #b7b7b7;
+    padding: 30px 40px;
+    height: 100%;
+    //@extend .flex-between;
+    margin: 0 auto;
+    width: 100%;
+  }
+  //.slider_container{
+  //  display: none;
+  //}
+  .slider_container{
+    width: 100%;
+    height: 100%;
+    @extend .flex-center;
+  }
+  .collection-container{
+    @extend .flex-center;
+    padding: 30px 20px;
+    border-radius: 10px;
+    background: white;
+    flex-direction: column;
+   width: 350px;
+    height: 510px;
+    margin: 0 8px;
+    transition: 0.3s;
+  }
+
+
+   .header {
+    font-family: 'Droid Serif', serif;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: bold;
+     text-align: center;
+     max-height: 72px;
+     overflow: hidden;
+  }
+   .photo {
+    height:230px;
+     margin: 10px;
+     width: 100%;
+     background: center 92% no-repeat;
+     background-size: 62%;
+
+  }
+  //.cloth-1{
+  //  background-image: url("../images/product/1.jpg");
+  //}
+  .cloth-2{
+    background-image: url("../images/product/2.jpg");
+  }
+  .cloth-3{
+    background-image: url("../images/product/3.jpg");
+  }
+  .cloth_img{
+    height: 100%;
+    display: block;
+    margin: auto;
+  }
+
+  .text {
+    font-family: 'Open Sans Semibold', sans-serif;
+    font-size: 11px;
+    flex: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 70px;
+  }
+  .price {
+    border-bottom: 1px solid #b7b7b7;
+    @extend .flex-between;
+    align-items: flex-end;
+    width: 100%;
+    margin-top: 20px;
+  padding-bottom: 10px;
+  }
+  .price-title{
+    color: #ff7f44;
+    font-family: 'Open Sans Bold', sans-serif;
+    font-size: 11px;
+  }
+
+  .price-value {
+    font-family: 'Droid Serif', serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #ff5100;
+  }
+  .sup{
+    font-size: 16px;
+  }
+  .actions {
+    height:55px;
+    @extend .flex-between;
+    width: 100%;
+    padding-top: 15px;
+  }
+
+  .btn-action-like{
+    background: url("../images/sprite.png") no-repeat -410px -15px;
+    width:35px;
+    height:35px;
+    display: inline-block;
+    cursor: pointer;
+&:hover {
+  background: url("../images/sprite.png") no-repeat -410px -65px;
+}
+  }
+
+  .btn-action-shop{
+    background: url("../images/sprite.png") no-repeat -460px -15px;
+    width:35px;
+    height:35px;
+    display: inline-block;
+    cursor: pointer;
+    &:hover {
+      background: url("../images/sprite.png") no-repeat -460px -65px;
+    }
+  }
+
+  .btn-action-basket{
+    background: url("../images/sprite.png") no-repeat -510px -20px;
+    width:35px;
+    height:35px;
+    display: inline-block;
+    cursor: pointer;
+    &:hover {
+      background: url("../images/sprite.png") no-repeat -510px -70px;
+    }
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  /* STYLES IE10 */
+.clothes_choose{
+  justify-content: center;
+  .header{
+    width: 100%;
+  }
+  .text{
+    width: 100%;
+  }
+  .collection-container{
+    width: 100%;
+  }
+}
+}
+
+@media screen and (max-width: 1024px){
+  .clothes_choose{
+    min-height: 680px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background: #b7b7b7;
+    .main_container{
+      background: none;
+      padding: 0;
+      flex: 1;
+      align-items: center;
+    }
+    .collection-container{
+      max-width: 230px;
+      padding: 20px;
+    }
+    .price-value{
+      font-size: 24px;
+    }
+  }
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    /* STYLES IE10 */
+    .clothes_choose{
+      height: 680px;
+      .main_container{
+        height: 680px;
+      }
+      .collection-container{
+        height: 510px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 785px){
+  .clothes_choose{
+    min-height: 530px;
+    //.slider_container{
+    //  width: 100%;
+    //  display: block;
+    //}
+  .slider_container{
+    display: block;
+  }
+.collection-container{
+  height: 460px;
+  max-width: 500px;
+  width: 500px;
+  //float: left;
+  margin: 50px 10px;
+}
+    .collection-container.slick-current{
+      height: 500px;
+      margin: 30px 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 550px){
+  .clothes_choose{
+    min-height: 450px;
+    .mobile_slider_body{
+      height: 450px;
+    }
+    .collection-container{
+      height: 370px;
+      max-width: 240px;
+      width: 240px;
+      margin: 40px 10px;
+    }
+    .collection-container.slick-current{
+      height: 400px;
+      margin: 25px 10px;
+    }
+  }
+}

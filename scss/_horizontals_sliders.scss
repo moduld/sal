@@ -1,0 +1,43 @@
+.horizontal_sliders{
+  width: 100%;
+  display: flex;
+  .main_container{
+    background: white;
+    padding: 55px 0;
+    @extend .flex-center;
+    margin: 0 auto;
+    width: 100%;
+    flex-direction: column;
+  }
+  .sliders_containers{
+    width: 100%;
+
+  }
+  .header{
+    width: 100%;
+    border-bottom: 1px solid black;
+    font-family: 'Droid Serif', serif;
+    font-size: 20px;
+    padding: 0 40px 15px;
+  }
+  .body{
+    padding: 40px;
+    width: 100%;
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  /* STYLES IE10 */
+  .horizontal_sliders{
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .horizontal_sliders{
+    background: white;
+    .body{
+      padding: 40px 0;
+    }
+  }
+}

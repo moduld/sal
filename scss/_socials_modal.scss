@@ -1,0 +1,93 @@
+.share_socials{
+  width: 400px;
+  .modal-body{
+    @extend .flex-center;
+    flex-direction: column;
+    position: relative;
+  }
+  .close{
+    color: white;
+    position: absolute;
+    top: 0;
+    right: -35px;
+    cursor: pointer;
+    font-size: 25px;
+    padding: 10px;
+    line-height: 15px;
+    &:hover{
+      color: red;
+    }
+  }
+  .share{
+    width:100%;
+    height:70px;
+    margin-bottom: 10px;
+    @extend .flex-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  .share-email {
+    background: #3586f5;
+  }
+  .share-pinterest {
+    background: #cc212a;
+  }
+  .share-facebook {
+    background: #3b569f;
+  }
+  .share-twitter {
+    background: #1ab2ef;
+    margin-bottom: 0;
+  }
+  .icon {
+    width:70px;
+    height:100%;
+    border-right: 1px solid white;
+  }
+  .url {
+    @extend .flex-center;
+    flex: 1 0 auto;
+    height:100%;
+    font-size: 18px;
+    font-family: "Open Sans Regular", sans-serif;
+    color: #fff;
+  }
+
+  .share-email .icon {
+    background: url("../images/sprite.png") no-repeat  no-repeat -556px -140px;
+  }
+
+  .share-pinterest .icon {
+    background: url("../images/sprite.png") no-repeat  no-repeat -618px -145px;
+  }
+
+  .share-facebook .icon {
+    background: url("../images/sprite.png") no-repeat  no-repeat -677px -150px;
+  }
+
+  .share-twitter .icon {
+    background: url("../images/sprite.png") no-repeat  no-repeat -730px -140px;
+  }
+  .like{
+    width:35px;
+    height:35px;
+    display: block;
+    background: url("../images/sprite.png") no-repeat  no-repeat -405px -115px;
+    margin-left: 4px;
+    margin-top: 8px;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .share_socials{
+    width: 300px;
+    .close{
+      top: auto;
+      bottom: -50px;
+      font-size: 50px;
+      line-height: 28px;
+      right: 50%;
+      transform: translateX(50%);
+    }
+  }
+}

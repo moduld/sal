@@ -1,0 +1,75 @@
+    <div class="main_container" >
+        <div class="container-man">
+            <div class="man" >
+                <img class="man_images" ng-src="{{::$ctrl.mannequine}}" ng-class="{visible_img: showImgFlag}">
+                <img class="man_images" ng-src="{{::$ctrl.defaultTop}}" ng-class="{visible_img: showImgFlag && topSliderNotStarted}" >
+                <img class="man_images" ng-src="{{::$ctrl.defaultMiddle}}" ng-class="{visible_img: showImgFlag && middleSliderNotStarted}" >
+                <img class="man_images" ng-src="{{::$ctrl.defaultBottom}}" ng-class="{visible_img: showImgFlag && bottomSliderNotStarted}" >
+                <div class="spinner_wrapp" ng-if="!showImgFlag"></div>
+            </div>
+            <div class="man central_man">
+                <img class="man_images" ng-src="{{::$ctrl.mannequine}}" ng-class="{visible_img: showImgFlag}">
+                <img class="man_images" ng-src="{{::$ctrl.defaultTop}}" ng-class="{visible_img: showImgFlag && topSliderNotStarted}">
+                <img class="man_images" ng-src="{{::$ctrl.defaultMiddle}}" ng-class="{visible_img: showImgFlag && middleSliderNotStarted}">
+                <img class="man_images" ng-src="{{::$ctrl.defaultBottom}}" ng-class="{visible_img: showImgFlag && bottomSliderNotStarted}">
+                <div class="spinner_wrapp" ng-if="!showImgFlag"></div>
+            </div>
+            <div class="man">
+                <img class="man_images" ng-src="{{::$ctrl.mannequine}}" ng-class="{visible_img: showImgFlag}">
+                <img class="man_images" ng-src="{{::$ctrl.defaultTop}}" ng-class="{visible_img: showImgFlag && topSliderNotStarted}">
+                <img class="man_images" ng-src="{{::$ctrl.defaultMiddle}}" ng-class="{visible_img: showImgFlag && middleSliderNotStarted}">
+                <img class="man_images" ng-src="{{::$ctrl.defaultBottom}}" ng-class="{visible_img: showImgFlag && bottomSliderNotStarted}">
+                <div class="spinner_wrapp" ng-if="!showImgFlag"></div>
+            </div>
+
+                    <div class="top_cloth_section"
+                     slick-slider="$ctrl.topSliderSettings"
+                     ng-if="$ctrl.runTopSlider" add-scope-to-cloned-items>
+                    <div class="slides" ng-repeat="item in  $ctrl.topSectionClothes track by $index" data-id="{{::$index}}" >
+                        <img ng-src="{{::$ctrl.defaultTop}}" alt="" class="slider_img" ng-class="{visible_img: !item.loaded}" >
+                        <img ng-src="{{::item.image}}" alt="" class="slider_img" ng-class="{visible_img: item.loaded}"  img-load-end ng-if="shownTopIndexes.indexOf($index) >= 0">
+                        <img data-source="{{::item.image}}" alt="" class="slider_img" ng-class="{visible_img: item.loaded}"  img-load-end >
+                        <div class="small_spinner_wrapp" ng-if="!item.loaded"></div>
+                    </div>
+            </div>
+
+            <div class="middle_cloth_section"
+                        slick-slider="$ctrl.middleSliderSettings"
+                        ng-if="$ctrl.runMiddleSlider" add-scope-to-cloned-items>
+
+            <div class="slides" ng-repeat="item in  $ctrl.middleSectionClothes track by $index" data-id="{{::$index}}">
+                <img ng-src="{{::$ctrl.defaultMiddle}}" alt="" class="slider_img" ng-class="{visible_img: !item.loaded}">
+                <img ng-src="{{::item.image}}" alt=""  class="slider_img" ng-class="{visible_img: item.loaded}" img-load-end ng-if="shownMiddleIndexes.indexOf($index) >= 0">
+                <img data-source="{{::item.image}}" alt="" class="slider_img" ng-class="{visible_img: item.loaded}"  img-load-end >
+                <div class="small_spinner_wrapp" ng-if="!item.loaded"></div>
+            </div>
+        </div>
+
+
+           <div class="bottom_cloth_section"
+                slick-slider="$ctrl.bottomSliderSettings"
+                ng-if="$ctrl.runBottomSlider" add-scope-to-cloned-items>
+
+                   <div class="slides" ng-repeat="item in  $ctrl.bottomSectionClothes track by $index" data-id="{{::$index}}">
+                       <img ng-src="{{::$ctrl.defaultBottom}}" alt="" class="slider_img" ng-class="{visible_img: !item.loaded}">
+                       <img ng-src="{{::item.image}}" alt="" class="slider_img" ng-class="{visible_img: item.loaded}" img-load-end ng-if="shownBottomIndexes.indexOf($index) >= 0">
+                       <img data-source="{{::item.image}}" alt="" class="slider_img" ng-class="{visible_img: item.loaded}"  img-load-end >
+                       <div class="small_spinner_wrapp" ng-if="!item.loaded"></div>
+                   </div>
+           </div>
+
+            <div class="top_cloth_section_slide_field" md-swipe-left="$ctrl.makeSwiperStep('top', true)" md-swipe-right="$ctrl.makeSwiperStep('top', false)"></div>
+            <div class="middle_cloth_section_slide_field" md-swipe-left="$ctrl.makeSwiperStep('middle', true)" md-swipe-right="$ctrl.makeSwiperStep('middle', false)"></div>
+            <div class="bottom_cloth_section_slide_field" md-swipe-left="$ctrl.makeSwiperStep('bottom', true)" md-swipe-right="$ctrl.makeSwiperStep('bottom', false)"></div>
+        </div>
+
+        <div class="slider-total">
+            <span class="btn-info" ng-click="$ctrl.callModal(true)"></span>
+            <span class="slider-total-title" >Total: <span class="slider-total-sum">
+                $ {{($ctrl.topClothPrice * 1 + $ctrl.middleClothPrice * 1 + $ctrl.bottomClothPrice * 1).split('.')[0] || ($ctrl.topClothPrice * 1 + $ctrl.middleClothPrice * 1 + $ctrl.bottomClothPrice * 1)}}
+                <sup class="sup">{{($ctrl.topClothPrice * 1 + $ctrl.middleClothPrice * 1 + $ctrl.bottomClothPrice * 1).split('.')[1] || '00'}}</sup>
+            </span>
+            </span>
+            <span class="btn-social" ng-click="$ctrl.callModal(false)"></span>
+        </div>
+    </div>

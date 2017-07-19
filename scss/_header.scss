@@ -1,0 +1,207 @@
+.nav_bar{
+  display: flex;
+  width: 100%;
+  min-height: 90px;
+  background-color: rgba(0,0,0,.8);
+  color: white;
+  font-family: 'Open Sans Regular', sans-serif;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  .main_container{
+    margin: 0 auto;
+    @extend .flex-center;
+    align-items: flex-end;
+    padding-bottom: 20px;
+    position: relative;
+    min-height: 100%;
+    flex: 1 0 auto;
+  }
+  .logo{
+    display: block;
+    position: absolute;
+    left: 40px;
+    top: 10px;
+    height: 175px;
+    width: 175px;
+    background: url(../images/sprite.png) no-repeat -20px -20px;
+  }
+  .icons_wrapper{
+    @extend .flex-between;
+    position: absolute;
+    right: 40px;
+    bottom: 20px;
+  }
+  .white_button{
+    width: 85px;
+    height: 25px;
+    border-radius: 12px;
+    background: white;
+    @extend .flex-center;
+    font-weight: bold;
+    margin-right: 10px;
+    color: black;
+    font-size: 14px;
+    cursor: pointer;
+    &:hover{
+      color: red;
+    }
+  }
+  .user{
+    height: 25px;
+    width: 25px;
+    @extend .backgr-center;
+    cursor: pointer;
+  }
+  .user_head{
+    margin: 0 10px;
+    background: url("../images/sprite.png") no-repeat -220px -19px;
+    &:hover{
+      background: url("../images/sprite.png") no-repeat -260px -19px;
+    }
+  }
+  .user_bag{
+    margin-left: 10px;
+    position: relative;
+    background: url("../images/sprite.png") no-repeat -218px -58px;
+    &:hover{
+      background: url("../images/sprite.png") no-repeat -258px -58px;
+    }
+  }
+  .items_quont{
+    position: absolute;
+    bottom: 0;
+    right: -8px;
+    font-size: 10px;
+  }
+}
+.scrolled_navbar{
+  min-height: 75px;
+
+  .logo{
+    height: 57px;
+    width: 57px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url(../images/sprite.png) no-repeat -220px -110px;
+  }
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  /* STYLES IE10 */
+  .nav_bar{
+    justify-content: center;
+    height: 90px;
+  }
+  .scrolled_navbar{
+    height: 75px;
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .nav_bar{
+    .logo{
+      left: 0;
+      top: 10px;
+      height: 127px;
+      width: 127px;
+      background: url(../images/SAL-logo-2.png) no-repeat center center;
+      background-size: contain;
+    }
+    .collection_name{
+      font-size: 13px;
+    }
+
+    .icons_wrapper{
+      right: 10px;
+    }
+  }
+  .scrolled_navbar{
+    .logo{
+      height: 57px;
+      width: 57px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: url(../images/sprite.png) no-repeat -220px -110px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px){
+  .nav_bar{
+    padding: 0 10px;
+    .icons_wrapper{
+      flex-wrap: wrap;
+      bottom: 50%;
+      transform: translateY(50%);
+    }
+    .collection_name{
+      max-width: 200px;
+      text-align: center;
+    }
+    .user{
+      margin: 0;
+    }
+    .white_button{
+      width: 100%;
+      margin: 10px 0 0;
+      order: 1;
+    }
+  }
+  .scrolled_navbar{
+    .main_container{
+      padding-bottom: 0;
+      align-items: center;
+    }
+  }
+}
+
+@media screen and (max-width: 550px){
+  .nav_bar{
+    min-height: 65px;
+    .main_container{
+      justify-content: space-between;
+      align-items: center;
+      padding: 0;
+    }
+    .logo{
+      position: static;
+      height: 57px;
+      width: 57px;
+      top: 50%;
+      background: url(../images/sprite.png) no-repeat -220px -110px;
+    }
+    .white_button{
+      height: 20px;
+      font-size: 9px;
+    }
+
+    .icons_wrapper{
+      position: static;
+      max-width: 70px;
+      transform: translateY(0);
+    }
+    .collection_name{
+      font-size: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  /* STYLES IE10 */
+ .nav_bar{
+   height: 65px;
+ }
+}
+
+@media screen and (max-width: 360px){
+  .nav_bar{
+    padding: 0 5px;
+    .collection_name{
+      max-width: 160px;
+    }
+    .icons_wrapper{
+      padding-right: 10px;
+    }
+  }
+}

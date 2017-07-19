@@ -1,0 +1,102 @@
+<div class="modal_accordion">
+    <h4 class="modal-title">User<span class="close" ng-click="ctrl.closeModal()">&times;</span></h4>
+    <div class="item_wrapper">
+        <div class="social_wrapp">
+            <div class="share share-facebook">
+                <span class="icon"></span>
+                <span class="url">Continue with Facebook</span>
+            </div>
+        </div>
+        <div class="drop_container">
+            <input type="checkbox" name="toggler_name_1" id="toggler_1" class="hidden" ng-model="mannequinsList.state" ng-change="ctrl.mannequinsListToggle(mannequinsList.state)">
+            <label for="toggler_1" class="toggler">Change Mannequin</label>
+            <div class="drop_body">
+                <div class="slider_wrapper"
+                     run-horizontal-sliders="{
+                    horizontal: '1',
+                    itemNav: 'basic',
+                    activateOn: 'click',
+                    smart: '1',
+                    mouseDragging: '1',
+                    touchDragging: '1',
+                    releaseSwing: '1',
+                    startAt: '0',
+                    scrollBar: '1',
+                    scrollBy: 1,
+                    speed: '300',
+                    elasticBounds: '1',
+                    dragHandle: '1',
+                    dynamicHandle: '1',
+                    clickBar: '1'}"
+                    ng-if="ctrl.runMannequineSlider">
+                    <ul class="slides_wrapp">
+                        <li class="slides" ng-repeat="mannequine in ctrl.allMannequins track by $index" ng-init="mannequine.loaded = false" ng-class="{default_slide: mannequine.currentMan}">
+                            <img ng-src="{{mannequine.mannequin}}" alt="" class="slide_img" ng-class="{visible_img: mannequine.loaded}" img-load-end>
+                            <div class="small_spinner_wrapp">
+                                <md-progress-circular ng-if="!mannequine.loaded" class="md-warn md-hue-3" md-diameter="20"></md-progress-circular>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="button_wrapper">
+                    <button type="button" class="btn-change" ng-click="ctrl.saveMannequine()">Done</button>
+                </div>
+                <div class="spinner_wrapp">
+                    <md-progress-circular ng-if="ctrl.activated" class="md-warn md-hue-3" md-diameter="70"></md-progress-circular>
+                </div>
+            </div>
+        </div>
+        <div class="drop_container">
+            <input type="checkbox" name="toggler_name_2" id="toggler_2" class="hidden">
+            <label for="toggler_2" class="toggler">Share this site</label>
+            <div class="drop_body">
+                <div class="panel">
+                    <a href="#" class="small_share small_share-email"></a>
+                    <a href="#" class="small_share small_share-facebook"></a>
+                    <a href="#" class="small_share small_share-pinterest"></a>
+                    <a href="#" class="small_share small_share-twitter"></a>
+                </div>
+            </div>
+        </div>
+        <div class="drop_container">
+            <input type="checkbox" name="toggler_name_3" id="toggler_3" class="hidden">
+            <label for="toggler_3" class="toggler">About App</label>
+            <div class="drop_body">
+                <p class="drop_text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus
+                    eaque recusandae repellat saepe sed. Dolores expedita nisi quisquam
+                    recusandae sint sit. Aperiam asperiores atque ea enim est eum exercitationem
+                    explicabo fugiat fugit, incidunt optio quae quaerat quasi similique, voluptatum.
+                    Assumenda consectetur dolorem ducimus illo in natus non, quas quisquam temporibus.
+                </p>
+            </div>
+        </div>
+        <div class="drop_container">
+            <input type="checkbox" name="toggler_name_4" id="toggler_4" class="hidden">
+            <label for="toggler_4" class="toggler">Term and Conditions</label>
+            <div class="drop_body">
+                <p class="drop_text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus
+                    eaque recusandae repellat saepe sed. Dolores expedita nisi quisquam
+                    recusandae sint sit. Aperiam asperiores atque ea enim est eum exercitationem
+                    explicabo fugiat fugit, incidunt optio quae quaerat quasi similique, voluptatum.
+                    Assumenda consectetur dolorem ducimus illo in natus non, quas quisquam temporibus.
+                </p>
+            </div>
+        </div>
+        <div class="drop_container">
+            <input type="checkbox" name="toggler_name_5" id="toggler_5" class="hidden">
+            <label for="toggler_5" class="toggler">FAQ</label>
+            <div class="drop_body">
+                <p class="drop_text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus
+                    eaque recusandae repellat saepe sed. Dolores expedita nisi quisquam
+                    recusandae sint sit. Aperiam asperiores atque ea enim est eum exercitationem
+                    explicabo fugiat fugit, incidunt optio quae quaerat quasi similique, voluptatum.
+                    Assumenda consectetur dolorem ducimus illo in natus non, quas quisquam temporibus.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

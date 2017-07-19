@@ -1,0 +1,74 @@
+.first_time_window{
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  align-items: center;
+  .logotype{
+      display: block;
+    height: 176px;
+    width: 176px;
+      background: url(../images/sprite.png) no-repeat -20px -20px;
+  }
+  .socials{
+    width: 100%;
+    margin-top: 20px;
+  }
+  .share{
+    width:100%;
+    height:70px;
+    margin-bottom: 10px;
+    @extend .flex-between;
+    align-items: center;
+    cursor: pointer;
+  }
+  .share-facebook {
+    background: #3b569f;
+  }
+  .icon {
+    width:70px;
+    height:100%;
+    border-right: 1px solid white;
+  }
+  .url {
+    @extend .flex-center;
+    flex: 1 0 auto;
+    height:100%;
+    font-size: 18px;
+    font-family: "Open Sans Regular", sans-serif;
+    color: #fff;
+  }
+  .share-facebook .icon {
+    background: url("../images/sprite.png") no-repeat  no-repeat -677px -150px;
+  }
+  .skip{
+    font-family: 'Open Sans Regular', sans-serif;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+    cursor: pointer;
+    margin-top: 20px;
+    &:hover{
+      color: red;
+    }
+    &:hover .arrows{
+      margin-left: 15px;
+    }
+  }
+  .arrows{
+    font-size: 20px;
+    margin-left: 10px;
+    transition: 0.3s;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .first_time_window{
+    width: 300px;
+  }
+}

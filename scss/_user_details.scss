@@ -1,0 +1,224 @@
+.modal_accordion{
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  .modal-title{
+    font-family: 'Open Sans Regular', sans-serif;
+    color: #fff;
+    font-size: 14px;
+    height: 65px;
+    @extend .flex-center;
+    background-color: #282828;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+  }
+  .close{
+    position: absolute;
+    top: -8px;
+    right: -20px;
+    font-size: 25px;
+    cursor: pointer;
+    &:hover{
+      color: red;
+    }
+  }
+  .item_wrapper{
+    padding: 30px;
+    border-radius: 0 0 10px 10px;
+    background: white;
+  }
+  .drop_container{
+    border-bottom: 1px solid #e2e2e2;
+    position: relative;
+  }
+  .hidden{
+    display: none;
+    &:checked ~ .drop_body{
+      max-height: 1000px;
+      transition: max-height 1s ease-in;
+    }
+    &:checked ~ .toggler:after{
+      transform: rotate(-90deg);
+    }
+  }
+  .toggler{
+    font-family: "Open Sans Regular", sans-serif;
+    font-size: 12px;
+    color: #444;
+    padding: 15px 0;
+    @extend .flex-between;
+
+    line-height: 20px;
+    &:after{
+      content: '';
+      width: 20px;
+      height: 20px;
+      background: url(../images/sprite.png) no-repeat -340px -105px;
+      transition: 0.5s;
+      display: block;
+    }
+  }
+  .drop_body{
+    max-height: 0;
+    overflow: hidden;
+    font-family: "Open Sans Regular", sans-serif;
+    font-size: 12px;
+    color: #444;
+    transition: max-height 1s ease-out;
+  }
+  .social_wrapp{
+    @extend .flex-between;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #e2e2e2;
+  }
+  .share{
+    width:100%;
+    max-width: 260px;
+    height:45px;
+    margin-bottom: 10px;
+    @extend .flex-between;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  .share-facebook {
+    background: #3b569f;
+  }
+  .icon {
+    width:45px;
+    height:100%;
+    border-right: 1px solid white;
+  }
+  .url {
+    @extend .flex-center;
+    flex: 1 0 auto;
+    height:100%;
+    font-size: 12px;
+    font-family: "Open Sans Regular", sans-serif;
+    color: #fff;
+  }
+  .share-facebook .icon {
+    background: url("../images/sprite.png") no-repeat  no-repeat -683px -213px;
+  }
+  .drop_text{
+    padding-bottom: 15px;
+  }
+.panel{
+  @extend .flex-center;
+  justify-content: flex-start;
+}
+  .small_share {
+    width:45px;
+    height:45px;
+    display: inline-block;
+    margin: 0 10px 10px 0;
+  }
+  .small_share-email {
+    background-image: url("../images/sprite.png");
+    background-color: #3586f5;
+    background-position: -562px -207px;;
+  }
+
+  .small_share-pinterest {
+    background-image: url("../images/sprite.png");
+    background-color: #cc212a;
+    background-position: -626px -209px;
+  }
+
+  .small_share-facebook {
+    background-image: url("../images/sprite.png");
+    background-color: #3b569f;
+    background-position: -683px -213px;
+  }
+
+  .small_share-twitter {
+    background-image: url("../images/sprite.png");
+    background-color: #3b569f;
+    background-position: -739px -207px;
+  }
+  .slider_wrapper{
+    height: 310px;
+  }
+.slides_wrapp{
+  height: 310px;
+}
+  .slides{
+    height: 265px;
+    width: 84px;
+    list-style: none;
+    display: block;
+    float: left;
+    position: relative;
+    margin: 22px 0;
+  }
+  .active,
+  .default_slide{
+    height: 310px;
+    width: 98px;
+    margin: 0;
+  }
+  .slide_img{
+    height: 100%;
+    width: auto;
+    transition:  0.3s;
+    opacity: 0;
+  }
+
+  .button_wrapper{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+  }
+  .btn-change {
+    width: 80px;
+    height: 25px;
+    border-radius: 12.5px;
+    font-family: "Open Sans Bold", sans-serif;
+    font-size: 12px;
+    color: #fff;
+    background-color: #b7b7b7;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    &:hover{
+      background-color: #282828;
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px){
+  .modal_accordion{
+    .modal-title{
+      height: 35px;
+    }
+    .close{
+      top: 0;
+      right: 8px;
+    }
+
+  }
+}
+
+@media screen and (max-width: 550px){
+  .modal_accordion{
+    .item_wrapper{
+      padding: 20px;
+    }
+    .slider_wrapper{
+      height: 270px;
+    }
+    .slides_wrapp{
+      height: 270px;
+    }
+    .slides{
+      height: 225px;
+    }
+    .active,
+    .default_slide{
+      height: 270px;
+      width: 86px;
+      margin: 0;
+    }
+  }
+}

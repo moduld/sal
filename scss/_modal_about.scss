@@ -1,0 +1,54 @@
+.modal_about{
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  .modal-title{
+    font-family: 'Open Sans Regular', sans-serif;
+    color: #fff;
+    font-size: 14px;
+    min-height: 65px;
+    @extend .flex-center;
+    background-color: #282828;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+  }
+  .close{
+    position: absolute;
+    top: -8px;
+    right: -20px;
+    font-size: 25px;
+    cursor: pointer;
+    &:hover{
+      color: red;
+    }
+  }
+  .modal-body{
+    padding: 30px;
+    background: white;
+    border-radius: 0 0 10px 10px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+  }
+  .text{
+    width: 100%;
+    margin-top: 15px;
+    &:first-child{
+      margin-top: 0;
+    }
+  }
+}
+
+
+
+@media screen and (max-width: 768px){
+  .modal_about{
+    .modal-title{
+      min-height: 35px;
+      height: 35px;
+    }
+    .close{
+      top: 0;
+      right: 8px;
+    }
+  }
+}

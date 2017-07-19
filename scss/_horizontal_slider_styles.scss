@@ -1,0 +1,89 @@
+.collection-slider-items {
+  height:230px;
+  list-style: none;
+  padding: 0;
+
+}
+.collection-slider-item {
+  width:172px;
+  height:230px;
+  border: 0px solid #e9e9e9;
+  border-radius: 5px;
+  float:left;
+  padding: 0;
+  color: #ddd;
+  text-align: center;
+  cursor: pointer;
+}
+.collection-slider-item .photo {
+  height: 165px;
+  width:172px;
+  background: url("../images/collection_cover_sample.jpg");
+  position: relative;
+
+}
+.collection-slider-item .footer{
+  padding:10px;
+  height: 65px;
+}
+.collection-slider-item .item-name {
+  color: #fff;
+  padding-left: 45px;
+  padding-right: 40px;
+  width: 100%;
+  height: 52px;
+  position: absolute;
+  bottom: 0px;
+  font-size: 11px;
+  font-family: 'Open Sans Regular';
+  background-color: #1a1a1a;
+  opacity: 0.6;
+  padding-top: 10px;
+}
+.modeler-photo{
+  float: left;
+  margin-right: 10px;
+  position: relative;
+}
+.modeler-photo img {
+  height:45px;
+  width:45px;
+  border-radius: 50%;
+}
+.modeler-name {
+  float: left;
+  font-family: 'Open Sans Regular';
+  font-size:11px;
+  color:#282828;
+  padding-top: 5px;
+  height:45px;
+  position: relative;
+  width: 90px;
+}
+.scrollbar {
+  margin: 0px 0 1em 0;
+  height: 3px;
+  background: #ccc;
+  line-height: 0;
+}
+
+.scrollbar .handle .mousearea {
+  position: absolute;
+  top: -9px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+}
+.scrollbar .handle {
+  width: 100px;
+  height: 100%;
+  background: #ff5100;
+  cursor: pointer;
+}
+.collection-slider-items li {
+  height: 260px;
+  width:180px;
+  float:left;
+  border: 0px solid red;
+
+}

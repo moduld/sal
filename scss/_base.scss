@@ -1,0 +1,65 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-between{
+  display: flex;
+  justify-content: space-between;
+}
+.flex-around{
+  display: flex;
+  justify-content: space-around;
+}
+.backgr-center{
+  background: center center no-repeat;
+}
+.main_container{
+  max-width: 1200px;
+}
+.visible_img{
+  opacity: 1 !important;
+}
+html{
+  background: #dbdbdb;
+}
+body{
+
+}
+.small_spinner_wrapp,
+.spinner_wrapp{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  @extend .backgr-center;
+  background: url("../images/spinner.gif");
+  background-size: contain;
+}
+.spinner_wrapp{
+  height: 50px;
+  width: 50px;
+}
+.small_spinner_wrapp{
+  height: 20px;
+  width: 20px;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  /* STYLES IE10 */
+    .main_container{
+      width: 100% !important;
+      margin: 0 !important;
+    }
+}
+
+@media screen and (max-width: 1024px){
+  .main_container{
+    max-width: 710px;
+  }
+}
